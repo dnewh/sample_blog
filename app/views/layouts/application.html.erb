@@ -52,9 +52,10 @@
 				</div>
 			<% end %>
 		</div>
-		<% flash.each do |msg, name| %>
-			<%= content_tag(:div, msg, class: "Alert") %>
-		<% end %>
+		<div id="alerts">
+			<p class="alert"><%= alert %></p>
+			<p class="notice"><%= notice %></p>
+		</div>
 		<%= yield %>
 	</div>
 
